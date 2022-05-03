@@ -12,7 +12,10 @@
   -typescript
   -javascript
   -html
-  
+  -----------------------------------------------------------------------CAPTURAS CRUD---------------------------------------------------------------------------------
+ 
+  ![agregar tarea.png no cargo](https://github.com/camVV/angular-mysql-CRUD/blob/main/CAPTURAS/crud-angular.PNG)
+  ![agregar tarea.png no cargo](https://github.com/camVV/angular-mysql-CRUD/blob/main/CAPTURAS/editar.PNG)
   ![agregar tarea.png no cargo](https://github.com/camVV/angular-mysql-CRUD/blob/main/CAPTURAS/agregar.PNG)
 
   
