@@ -1,0 +1,61 @@
+<main role="main" class="container" >
+      <div class="row" >
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header p-3">
+              <h5 class="mb-0">Listado</h5>
+            </div>
+            <div class="card-body" class="table-responsive" data-mdb-perfect-scrollbar="true" style="position: relative; height: relative">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th >{{tablaNombres.titulo}}</th>
+                    <th>{{tablaNombres.descripcion}}</th>
+                    <th>{{tablaNombres.ubicacion}}</th>
+                    <th>{{tablaNombres.edicion}}</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let tarea of tarea">
+                  <tr class="fw-normal">
+                    <th>
+                      <img [src]="tarea.imagen"
+                        class="shadow-1-strong rounded-circle" 
+                        style="width: 55px; height: auto;">
+                      <span class="ms-2 col-sm-3">{{tarea.nombre}}</span>
+
+                    </th>
+                    <td class="align-middle">
+                      <span>{{tarea.descripcion}}</span>
+                    </td>
+                    <td class="align-middle">
+                      <h6 class="mb-3"><span class="badge bg-primary">{{tarea.ubicacionCarpeta}}</span></h6>
+                    </td>
+                    <td class="align-right">
+                        <button class="btn btn-secondary"  [routerLink]="['/tareas/edit', tarea.id]">
+                            <fa-icon [icon]="fapencil"></fa-icon>
+                        </button>            
+                        <button class="btn btn-danger" (click)="eliminarTarea(tarea.id)">
+                            <fa-icon [icon]="fatrashalt"></fa-icon>
+                        </button>
+                    </td>
+                    <td>
+                        
+                    </td>
+                  </tr>
+                </tbody>
+                <td></td><td></td><td></td>
+                
+                
+              </table>
+            </div>
+            <button  class="btn btn-outline-dark" [routerLink]="['/tareas/add']" >
+                <fa-icon [icon]="faadd"></fa-icon>
+            </button>
+          </div>
+          
+        </div>
+      </div>
+    
+  </main>
+  
+

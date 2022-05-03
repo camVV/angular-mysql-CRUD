@@ -1,0 +1,36 @@
+<div class="col-md-4 offset-md-2 pt-5" >
+    <div class="card">
+        <form>
+            <div class="form-group">
+                <input type="text" placeholder="Titulo" class="form-control" name="nombre" [(ngModel)]="tarea.nombre" autofocus>
+            </div>
+            <div class="form-group">
+                <textarea type="text" placeholder="Descripcion" rows="9" class="form-control" name="descipcion" [(ngModel)]="tarea.descripcion"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="ubicacion" class="form-control" [(ngModel)]="tarea.ubicacionCarpeta" name="ubicacion">
+            </div>
+            <div class="form-group">
+                <input type="url" placeholder="imagen" class="form-control" [(ngModel)]="tarea.imagen" name="fecha">
+            </div>
+            <button class="btn btn-success btn-block" (click)="edit ? updateTarea() : guardarTarea()">
+                Guardar
+            </button>
+        </form>
+    </div>
+
+</div>
+
+<div class="col-md-4 pt-5">
+    <div class="card card-body text-center">
+        <img [src]="tarea.imagen == '' ? '/assets/noi.png' : tarea.imagen" class="card-img-top" width="304" height="236">
+        <h3>{{tarea.nombre == '' ? 'TITULO' : tarea.nombre}}</h3>
+        <p>{{tarea.descripcion == '' ? 'introducir descripcion' : tarea.descripcion}}</p>
+        <p>{{tarea.ubicacionCarpeta}}</p>
+        <p>{{tarea.create_at | date: 'yyy-MM-dd'}}</p>
+
+    </div>
+</div>
+
+
+

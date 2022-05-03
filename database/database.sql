@@ -1,0 +1,16 @@
+CREATE DATABASE tareasDB;
+
+USE tareasDB;
+
+CREATE TABLE tarea(
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(150),
+    imagen VARCHAR(150),
+    fecha VARCHAR(150),
+    create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+);
+
+RENAME TABLE tarea to tareas;
+
+DESCRIBE tareas;
