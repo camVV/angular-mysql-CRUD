@@ -13,6 +13,6 @@
   -javascript
   -html
   
-  
+  ![agregar tarea.png no cargo](https://github.com/camVV/angular-mysql-CRUD/blob/main/CAPTURAS/agregar.PNG)
 
   
